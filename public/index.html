@@ -24,7 +24,12 @@
 
         socket.emit('mensaje', { nombre: 'Juan' } );
 
-        socket.on('mensaje', function( payload ){
+        socket.on('mensaje-Flutter', function( payload ){
+            console.log('Escuhando:', payload );
+        });
+
+        socket.on('active-bands', function( payload ){
+            console.clear();
             console.log('Escuhando:', payload );
         });
 
